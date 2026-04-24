@@ -28,6 +28,33 @@
         line-height: 1.45;
       }
 
+      .help {
+        margin: 0 0 20px;
+        padding: 12px 14px;
+        border: 1px solid color-mix(in srgb, CanvasText 16%, Canvas);
+        border-radius: 6px;
+        background: color-mix(in srgb, CanvasText 4%, Canvas);
+        color: color-mix(in srgb, CanvasText 82%, Canvas);
+        line-height: 1.45;
+      }
+
+      .help strong {
+        color: CanvasText;
+      }
+
+      .help ol {
+        margin: 8px 0 0 22px;
+        padding: 0;
+      }
+
+      .help li {
+        margin: 4px 0;
+      }
+
+      a {
+        color: #0969da;
+      }
+
       label {
         display: block;
         margin-bottom: 8px;
@@ -81,6 +108,15 @@
   <body>
     <h1>GitHub Following Highlighter</h1>
     <p>Use a GitHub token with read-only access to public user data. The token is stored locally in browser extension storage.</p>
+
+    <div class="help">
+      <strong>Required token:</strong> a GitHub classic personal access token with the <code>read:user</code> scope.
+      <ol>
+        <li>Open <a href="https://github.com/settings/tokens/new?description=GitHub%20Following%20Highlighter&scopes=read:user" target="_blank" rel="noreferrer">GitHub token settings</a>.</li>
+        <li>Select only <code>read:user</code>, then generate the token.</li>
+        <li>Paste it below and save.</li>
+      </ol>
+    </div>
 
     <label for="token">GitHub token</label>
     <input id="token" type="password" autocomplete="off" spellcheck="false" />

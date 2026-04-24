@@ -82,6 +82,16 @@ node --check content.js
 node --check options.js
 ```
 
+To build packaged extension archives:
+
+```bash
+make chrome
+make firefox
+make all
+```
+
+Build output is written to `dist/`. The Chrome build rewrites the Manifest V3 background entry to use `service_worker`; the Firefox build keeps `background.scripts`.
+
 ## Privacy
 
 The extension does not send data to any third-party server controlled by this project. Network requests go directly from your browser to `https://api.github.com/graphql`.
