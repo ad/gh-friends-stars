@@ -56,7 +56,9 @@ For very popular repositories, the badge is a preview of recent stars, not a com
 
 ## GitHub Token
 
-Use a GitHub token that can read public user data through the GraphQL API. The extension uses the token to:
+Use a GitHub token that can read public user data through the GraphQL API. For a classic personal access token, enable the `read:user` scope. If your token UI uses permission labels instead of classic scopes, choose read access for user data (`user:read` / `User: read`).
+
+The extension uses the token to:
 
 - verify the authenticated viewer;
 - query public repository stargazers;
