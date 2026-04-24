@@ -48,11 +48,37 @@ For very popular repositories, the badge is a preview of recent stars, not a com
 
 ## Installation
 
-1. Clone or download this repository.
-2. Open your browser's extensions page.
-3. Enable developer mode.
-4. Load this directory as an unpacked extension.
+Download the latest archive from the GitHub Releases page:
+
+- `gh-friends-stars-chrome.zip` for Chrome, Chromium, Edge, Brave, and other Chromium-based browsers.
+- `gh-friends-stars-firefox.zip` for Firefox.
+
+### Chrome
+
+Chrome does not install arbitrary zip archives directly. Unpack the Chrome archive first, then load the unpacked folder:
+
+1. Download `gh-friends-stars-chrome.zip` from Releases.
+2. Unzip it somewhere stable on your machine.
+3. Open `chrome://extensions`.
+4. Enable Developer mode.
+5. Click Load unpacked and select the unzipped folder.
+6. Click the extension icon and add a GitHub token.
+
+### Firefox
+
+For local testing, Firefox can load the packaged zip temporarily:
+
+1. Download `gh-friends-stars-firefox.zip` from Releases.
+2. Open `about:debugging#/runtime/this-firefox`.
+3. Click Load Temporary Add-on.
+4. Select `gh-friends-stars-firefox.zip`.
 5. Click the extension icon and add a GitHub token.
+
+Temporary Firefox add-ons are removed when Firefox restarts. For persistent installation, the extension must be signed through Mozilla Add-ons.
+
+### Development Install
+
+To run from source, clone this repository, open your browser's extensions page, enable developer mode, and load the repository directory as an unpacked extension.
 
 ## GitHub Token
 
