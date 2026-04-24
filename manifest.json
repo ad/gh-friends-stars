@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Following Highlighter",
+  "version": "2.1",
+  "description": "Shows people you follow among repository stargazers on GitHub",
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.github.com/*"],
+  "action": {
+    "default_title": "GitHub Following Highlighter"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
